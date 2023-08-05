@@ -1,0 +1,36 @@
+.contact-form {
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--light);
+}
+
+.contact-form > label {
+  display: block;
+  font-size: large;
+}
+
+.contact-form > input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .75rem;
+  border-radius: 3px;
+  border: 1.5px solid var(--dark);
+  color: var(--dark); 
+  font-size: larger;
+  background: transparent
+}
+
+.contact-form > button {
+  border: 2px solid var(--dark);
+  border-radius: .175rem;
+  padding: .75rem;
+  width: 100%;
+  color: var(--dark);
+  font-weight: 500;
+  background-color: transparent;
+}
