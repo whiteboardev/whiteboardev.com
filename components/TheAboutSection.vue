@@ -57,8 +57,8 @@ Nesta fase emocionante, sentamos juntos, com o café na mão, para mergulhar pro
 `;
 
 const designPhaseMessage = `
-Transformamos suas aspirações em arte digital. Nosso objetivo é criar um site que não apenas mostre sua
-experiência, mas também cative seus visitantes, mantendo-os envolvidos a cada passo do caminho. Apresentamos
+Transformamos suas aspirações em arte digital. Nosso objetivo é criar um site que  mostre sua
+experiência, cativando seus visitantes, mantendo-os envolvidos a cada passo do caminho. Apresentamos
 nossos designs a você e, juntos, ajustamos cada detalhe até que pareça perfeito.
 `;
 

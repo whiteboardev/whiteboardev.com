@@ -38,7 +38,7 @@ body {
   color: #000000;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -106,6 +106,30 @@ li {
 .logo-down {
   top: calc(-10%);
   left: calc(50%);
+}
+
+@media screen and (min-width: 480px) {
+  /* … */
+  .logo-top {
+    top: calc(-10%);
+    left: calc(75%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* … */
+  .logo-top {
+    top: calc(-10%);
+    left: calc(80%);
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  /* … */
+  .logo-top {
+    top: calc(-10%);
+    left: calc(90%);
+  }
 }
 
 @keyframes rotate {
