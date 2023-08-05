@@ -1,5 +1,7 @@
 .about {
   min-height: 100vh;
+  max-width: 100%;
+  width: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -11,8 +13,8 @@
 
 
 .about-phases {
-  width: 100%;
   min-height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -24,7 +26,7 @@
   height: 2rem;
   width: 2rem;
   position: absolute;
-  left: 56%;
+  left: 60%;
   top: 15%;
   border-radius: 100%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
@@ -86,6 +88,28 @@
 @media (min-width: 480px) {
  .about-icon {
    position: relative;
+  }
+
+  .about-phase {
+    max-width: 70%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* … */
+ .contact-form-container {
+    max-width: 40%;
+ }
+  .contact-form-container > input, textarea {
+    width: 94%
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  /* … */
+ .contact-form-container {
+    max-width: 70%;
  }
 }
 

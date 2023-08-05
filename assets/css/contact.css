@@ -1,19 +1,26 @@
 .contact-form {
   min-height: 100vh;
-  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--light);
+}
+
+.contact-form-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  background: var(--light);
+  padding: 1rem;
 }
 
-.contact-form > label {
+.contact-form-container > label {
   display: block;
   font-size: large;
 }
 
-.contact-form > input, textarea {
+.contact-form-container > input, textarea {
   display: block;
   width: 93%;
   margin-bottom: 1rem;
@@ -22,10 +29,11 @@
   border: 1.5px solid var(--dark);
   color: var(--dark); 
   font-size: larger;
+  font-family: 'Lexend Deca';
   background: transparent
 }
 
-.contact-form > button {
+.contact-form-container > button {
   border: 2px solid var(--dark);
   border-radius: .175rem;
   padding: .75rem;
@@ -33,4 +41,36 @@
   color: var(--dark);
   font-weight: 500;
   background-color: transparent;
+}
+
+@media screen and (min-width: 481px) {
+  /* … */
+  .contact-form-container {
+    max-width: 70%;
+  }
+  
+  .contact-form-container > input, textarea {
+    width: 95%
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* … */
+ .contact-form-container {
+    max-width: 40%;
+ }
+  .contact-form-container > input, textarea {
+    width: 94%
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  /* … */
+ .contact-form-container {
+    max-width: 70%;
+ }
+
+  .contact-form-container > input, textarea {
+    width: 97%
+  }
 }
