@@ -1,7 +1,11 @@
 
+.hero {
+  min-width: 100%;
+}
+
 .hero-intro-container {
   min-height: 100vh;
-  min-width: 100vw;
+  width: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -32,7 +36,7 @@
   border: 2px solid var(--dark);
   border-radius: .175rem;
   padding: .75rem;
-  width: 97vw;
+  width: 100%;
   color: var(--dark);
   font-weight: 500;
   background-color: transparent;
@@ -44,7 +48,7 @@
 }
 
 .hero-quick-links {
-  width: 97vw;
+  width: 97%;
   display:  flex;
   justify-content: center;
   gap: .375rem;

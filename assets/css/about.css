@@ -11,7 +11,7 @@
 
 
 .about-phases {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-flow: column;
@@ -76,7 +76,7 @@
   border-radius: .175rem;
   padding: .75rem;
   margin-top: .25rem;
-  width: 97vw;
+  width: 90%;
   color: var(--light);
   font-weight: 500;
   background: transparent;

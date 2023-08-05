@@ -12,7 +12,7 @@
   </header>
   <main id="main-content" class="main-content">
     <img src="/assets/images/light_logo.png" alt="light logo" class="floating-logo logo-top" />
-    <TheHeroSection />
+    <TheHeroSection @click="scrollToContactForm" />
     <TheAboutSection :lenis="lenis" />
     <TheContactForm />
   </main>
@@ -35,4 +35,10 @@ onMounted(() => {
   }
   requestAnimationFrame(raf);
 });
+
+function scrollToContactForm() {
+  if (lenis.value) {
+    lenis.value.scrollTo("#contact-form");
+  }
+}
 </script>
