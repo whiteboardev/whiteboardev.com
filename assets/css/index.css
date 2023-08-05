@@ -1,0 +1,120 @@
+@import "./hero.css";
+@import "./about.css";
+@import "./contact.css";
+
+:root {
+  /* Colors */
+  --dark: #24282C;
+  --light: #FAFAFA;
+}
+
+html {font-size: 100%;} /*16px*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+   pointer-events: none;
+}
+
+body {
+  background: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+p {margin-bottom: 1rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text_small {font-size: 0.8rem;}
+
+.header {
+  display: none;
+}
+
+main {
+  width: 100vw;
+  max-width: 100%;
+  position: static;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.floating-logo {
+  position:fixed;
+  background-color: transparent;
+  opacity: 0.05;
+  width: 300px;
+  height: 300px;
+  animation: 60s infinite rotate ease-in;
+}
+
+.logo-top {
+  top: calc(-10%);
+  left: calc(50%);
+}
+
+.logo-down {
+  top: calc(-10%);
+  left: calc(50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+

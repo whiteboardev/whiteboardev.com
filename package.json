@@ -11,6 +11,12 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "prettier": "^3.0.1"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^0.17.5",
+    "@studio-freight/lenis": "^1.0.19",
+    "typed.js": "^2.0.16"
   }
 }
