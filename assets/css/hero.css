@@ -1,16 +1,16 @@
 
 .hero {
-  min-width: 100%;
-}
-
-.hero-intro-container {
+  min-width: 100vw;
   min-height: 100vh;
-  width: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   background-color: var(--light);
+}
+
+.hero-intro-container {
+  width: auto;
 }
 
 .hero-intro {
@@ -67,6 +67,23 @@
   width: 2rem;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 480px) {
   /* … */
+ .hero-intro-container {
+    max-width: 50%;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  /* … */
+ .hero-intro-container {
+    max-width: 40%;
+ }
+}
+
+@media screen and (min-width: 1320px) {
+  /* … */
+ .hero-intro-container {
+    max-width: 30%;
+ }
 }
