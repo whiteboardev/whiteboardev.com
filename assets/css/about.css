@@ -1,0 +1,10 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: .375rem;
+  color: var(--light);
+  background-color: var(--dark);
+}

@@ -1,3 +1,5 @@
+@import "./hero.css";
+@import "./about.css";
 
 :root {
   /* Colors */
@@ -7,12 +9,35 @@
 
 html {font-size: 100%;} /*16px*/
 
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+   pointer-events: none;
+}
+
 body {
   background: white;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
 }
 
 p {margin-bottom: 1rem;}
@@ -38,3 +63,49 @@ h4 {font-size: 1.563rem;}
 h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: 0.8rem;}
+
+.header {
+  display: none;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.floating-logo {
+  position:fixed;
+  background-color: transparent;
+  opacity: 0.05;
+  width: 300px;
+  height: 300px;
+  animation: 60s infinite rotate ease-in;
+}
+
+.logo-top {
+  top: calc(-10%);
+  left: calc(50%);
+}
+
+.logo-down {
+  top: calc(-10%);
+  left: calc(50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
