@@ -16,6 +16,15 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/css/index.css',
-  ]
+    'notyf/notyf.min.css'
+  ],
+  runtimeConfig: {
+    twilio: {
+      sid: process.env.TWILIO_ACC_SID,
+      token: process.env.TWILIO_AUTH_TOKEN,
+      phoneToSend: process.env.TWILIO_PHONE_TO_SEND,
+      phoneToSendFrom: process.env.TWILIO_PHONE_TO_SEND_FROM
+    }
+  }
 })
 

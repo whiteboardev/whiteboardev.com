@@ -1,11 +1,6 @@
 <template>
   <li :id="id" class="about-phase">
-    <h1 :id="`${id}-title`" class="about-phase-title">
-      {{ props.title }}
-      <span>
-        <slot name="icon" />
-      </span>
-    </h1>
+    <slot name="title" />
     <p id="about-discovery-description" class="about-description">
       {{ props.description }}
     </p>
@@ -18,10 +13,6 @@
 <script setup>
 const props = defineProps({
   id: {
-    type: String,
-    default: "",
-  },
-  title: {
     type: String,
     default: "",
   },
