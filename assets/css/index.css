@@ -42,7 +42,6 @@ body {
   overflow-x: hidden;
 }
 
-p {margin-bottom: 1rem;}
 
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
@@ -89,6 +88,10 @@ li {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .floating-logo {
   position:fixed;
   background-color: transparent;
@@ -108,6 +111,17 @@ li {
   left: calc(50%);
 }
 
+.mt-1 {
+  margin-top: .375rem;
+}
+
+.mt-2 {
+  margin-top: .5rem;
+}
+
+.mt-3 {
+  margin-top: .75rem;
+}
 @media screen and (min-width: 480px) {
   /* … */
   .logo-top {

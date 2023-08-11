@@ -4,7 +4,12 @@
       <article id="introduction" class="hero-intro">
         <h1 id="hero-intro-title" class="hero-intro-title">Maximize suas Conversões.</h1>
         <h4 id="hero-intro-copy" class="hero-intro-copy"></h4>
-        <button type="button" id="hero-cta" class="hero-cta" @click="$emit('click', $event)">Agende uma reunião</button>
+        <button type="button" id="hero-cta" class="hero-cta" @click="$emit('click:schedule', $event)">
+          Agende uma reunião
+        </button>
+        <button type="button" id="about-cta" class="hero-cta mt-3" @click="$emit('click:more', $event)">
+          Saiba Mais
+        </button>
         <ul id="hero-quick-links" class="hero-quick-links">
           <li id="hero-instagram-quick-link" class="hero-quick-link-item">
             <a href="https://www.instagram.com/whiteboarddev" target="_blank">
