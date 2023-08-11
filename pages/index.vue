@@ -12,7 +12,7 @@
   </header>
   <main id="main-content" class="main-content">
     <img src="/assets/images/light_logo.png" alt="light logo" class="floating-logo logo-top" />
-    <TheHeroSection @click="scrollToContactForm" />
+    <TheHeroSection @click:schedule="scrollToContactForm" @click:more="scrollToAbout" />
     <TheAboutSection :lenis="lenis" />
     <TheContactForm />
   </main>
@@ -39,6 +39,12 @@ onMounted(() => {
 function scrollToContactForm() {
   if (lenis.value) {
     lenis.value.scrollTo("#contact-form");
+  }
+}
+
+function scrollToAbout() {
+  if (lenis.value) {
+    lenis.value.scrollTo("#about");
   }
 }
 </script>
