@@ -34,15 +34,23 @@ const formValues = reactive({
 
 async function sendWhatsappMessage() {
   try {
-    const response = await $fetch("/api/message", {
+    await $fetch("/api/message", {
       method: "POST",
       body: {
         ...formValues,
       },
     });
     $notyf.success("Mensagem enviada com sucesso");
+    resetFormValues();
   } catch (error) {
     $notyf.error("Um erro aconteceu");
+  }
+
+  function resetFormValues() {
+    formValues.name = "";
+    formValues.email = "";
+    formValues.phone = "";
+    formValues.dream = "";
   }
 }
 </script>
