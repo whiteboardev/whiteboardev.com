@@ -2,13 +2,24 @@
 	export let projects: Array<Record<string, string | number | boolean>> = [];
 </script>
 
-<section id="projects" class="container">
-	<h3>This are my personal projects that I'm currently working on</h3>
-	<ul id="projects">
+<section id="projects" class="container flex flex-col flex-start">
+	<h3 id="Projects Section">I'm currently working</h3>
+	<ul id="projects" class="projects">
 		{#each projects as project}
-			<li>
-				<h4>{project.name}</h4>
-				<p>{project.description}</p>
+			<li id="project" class="project">
+				<a href="https://www.github.com/whiteboardev" target="_blank">
+					<div class="flex flex-between">
+						<h5>{project.name}</h5>
+						<img
+							height="50"
+							width="50"
+							src="/icons/github.svg"
+							alt="Whiteboard Github Account Link"
+							class="social icon"
+						/>
+					</div>
+					<p class="margin-0">{project.description}</p>
+				</a>
 			</li>
 		{/each}
 	</ul>

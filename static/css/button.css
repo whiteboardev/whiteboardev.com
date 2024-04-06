@@ -1,0 +1,34 @@
+button {
+	cursor: pointer;
+	margin: var(--sm);
+	padding: var(--sm);
+	background-color: transparent;
+	border: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+.cta-button {
+	opacity: 0;
+	padding: var(--md) var(--xl);
+	background-color: var(--primary);
+	color: var(--secondary);
+	letter-spacing: 1px;
+	font-size: 1.25rem;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--primary);
+	justify-content: space-evenly;
+	align-items: center;
+	animation: fadeIn 300ms ease-in forwards;
+	margin: var(--xl) 0;
+}
+
+@media (min-width: 768px) {
+	.cta-button::hover {
+		background-color: var(--primary);
+		color: var(--secondary);
+		animation: bump 500ms ease-in forwards;
+	}
+}
