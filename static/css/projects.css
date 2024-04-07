@@ -1,0 +1,27 @@
+.projects {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: var(--gap-sm);
+}
+
+.project {
+	width: 100%;
+	padding: var(--lg);
+	border: 1px solid #d1d1d1;
+	border-radius: var(--radius-md);
+
+	a {
+		height: 100%;
+	}
+
+	h5 {
+		margin: 0;
+	}
+
+	p {
+		font-size: var(--md);
+	}
+}

@@ -4,8 +4,8 @@
 	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import SocialMedia from '$lib/components/SocialMedia.svelte';
 
+	// NOTE:: Props Declaration
 	export let data: PageData;
 </script>
 
@@ -13,5 +13,4 @@
 	<Header />
 	<Hero />
 	<Projects projects={data.repositories} />
-	<SocialMedia />
 </Page>

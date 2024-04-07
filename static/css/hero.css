@@ -4,4 +4,20 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	min-height: 100vh;
+}
+
+.hero-image {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.hero-image {
+		display: block;
+		font-size: var(--xl);
+	}
+
+	p {
+		font-size: var(--lg);
+	}
 }
