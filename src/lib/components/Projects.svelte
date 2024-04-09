@@ -7,16 +7,19 @@
 	<ul id="projects" class="projects">
 		{#each projects as project}
 			<li id="project" class="project">
-				<a href="https://www.github.com/whiteboardev" target="_blank">
+				<a href={project.html_url} target="_blank">
 					<div class="flex flex-between">
 						<h5>{project.name}</h5>
-						<img
-							height="50"
-							width="50"
-							src="/icons/github.svg"
-							alt="Whiteboard Github Account Link"
-							class="social icon"
-						/>
+						<div>
+							<span>{project.language}</span>
+							<img
+								height="50"
+								width="50"
+								src="/icons/github.svg"
+								alt="Whiteboard Github Account Link"
+								class="social icon"
+							/>
+						</div>
 					</div>
 					<p class="margin-0">{project.description}</p>
 				</a>
