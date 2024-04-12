@@ -1,0 +1,28 @@
+header {
+	display: block;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.social-links {
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--gap-md);
+}
+
+.social {
+	height: var(--xl);
+	width: var(--xl);
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--sm);
+}

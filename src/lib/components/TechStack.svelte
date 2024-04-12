@@ -1,7 +1,8 @@
 <script lang="ts">
+	export let className: string = '';
 </script>
 
-<ul id="tech-stack" class="tech-stack">
+<ul id="tech-stack" class={'tech-stack ' + className}>
 	<li>
 		<img
 			id="js-icon"

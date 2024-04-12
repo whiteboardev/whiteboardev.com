@@ -11,6 +11,8 @@
 
 <Page>
 	<Header />
-	<Hero />
-	<Projects projects={data.repositories} />
+	<div class="page">
+		<Hero />
+		<Projects projects={data.repositories} />
+	</div>
 </Page>

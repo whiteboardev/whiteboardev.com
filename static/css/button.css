@@ -13,8 +13,8 @@ button:focus {
 .cta-button {
 	opacity: 0;
 	padding: var(--md) var(--xl);
-	background-color: var(--primary);
-	color: var(--secondary);
+	background-color: transparent;
+	color: var(--primary);
 	letter-spacing: 1px;
 	font-size: 1.25rem;
 	border-radius: var(--radius-sm);
