@@ -4,14 +4,16 @@
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	gap: var(--gap-sm);
+	gap: var(--gap-md);
 }
 
 .project {
 	width: 100%;
-	padding: var(--lg);
-	border: 1px solid #d1d1d1;
-	border-radius: var(--radius-md);
+	padding: var(--sm);
+	background-color: var(--primary-light);
+	border-radius: var(--radius-sm);
+	border: 1px solid hsl(210, 10%, 90%);
+	box-shadow: 1px 2px 4px var(--primary-light);
 
 	a {
 		height: 100%;
@@ -22,6 +24,18 @@
 	}
 
 	p {
-		font-size: var(--md);
+		font-size: var(--lg);
 	}
+}
+
+.contact-dialog {
+	transition: all 150ms ease-in-out;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--primary-light);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.contact-dialog::backdrop {
+	background-color: hsl(255, 255, 255, 0.15);
+	backdrop-filter: blur(2px);
 }
