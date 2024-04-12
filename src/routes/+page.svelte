@@ -13,6 +13,6 @@
 	<Header />
 	<div class="page">
 		<Hero />
-		<Projects projects={data.repositories} />
+		<Projects projects={data.projects} />
 	</div>
 </Page>

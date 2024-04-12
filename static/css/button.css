@@ -24,11 +24,3 @@ button:focus {
 	animation: fadeIn 300ms ease-in forwards;
 	margin: var(--xl) 0;
 }
-
-@media (min-width: 768px) {
-	.cta-button::hover {
-		background-color: var(--primary);
-		color: var(--secondary);
-		animation: bump 500ms ease-in forwards;
-	}
-}

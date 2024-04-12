@@ -14,9 +14,10 @@ export const load: PageServerLoad = async () => {
 			}
 		});
 		return {
-			repositories
-		};
+			projects: repositories.data
+		}
 	} catch (error) {
+		console.error(error);
 		return {
 			repositories: [{ name: 'nvio' }, { name: 'whiteboardev.com' }]
 		};

@@ -1,5 +1,9 @@
 <script lang="ts">
 	export let projects: Array<Record<string, string | number | boolean>> = [];
+
+	function getProjectDescription(project: Record<string, string | number | boolean>): string {
+		return project.description || 'Something really cool to work on!';
+	}
 </script>
 
 <section id="projects" class="container flex flex-col flex-start">
@@ -12,7 +16,7 @@
 						<p class="margin-0">
 							{project.name}
 							<br />
-							<small class="margin-0">{project.description}</small>
+							<small class="margin-0">{getProjectDescription(project)}</small>
 						</p>
 						<img
 							height="50"
