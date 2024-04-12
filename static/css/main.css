@@ -1,13 +1,17 @@
 @import './button.css';
 @import './hero.css';
+@import './header.css';
 @import './projects.css';
+@import './filters.css';
+@import './utils.css';
 @import './animations.css';
 
 :root {
 	/* Colors */
 	--background: #f8fafc;
 
-	--primary: #24282c;
+	--primary: hsl(210, 10%, 16%);
+	--primary-light: hsl(210, 10%, 96%);
 	--secondary: #f8fafc;
 
 	/* Spacing, Sizing */
@@ -76,6 +80,11 @@ body {
 	overflow-y: auto;
 	overflow-x: hidden;
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: var(--gap-lg);
 }
 
 h1,
@@ -115,6 +124,11 @@ small,
 	font-size: 0.8rem;
 }
 
+figure {
+	padding: 0;
+	margin: 0;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -131,93 +145,11 @@ a {
 	color: var(--primary);
 }
 
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: var(--md);
+.page {
+	max-width: 375px;
 }
 
 .container {
 	padding: var(--lg);
-}
-
-.social-links {
-	justify-content: flex-start;
-	align-items: center;
-	gap: var(--gap-lg);
-}
-
-.show-md {
-	display: none;
-}
-
-.show-sm {
-	display: block;
-}
-
-.social {
-	height: var(--xl);
-	width: var(--xl);
-}
-
-.instagram {
-	fill: blue;
-}
-
-.linkedin {
-	filter: blue;
-}
-
-.flex {
-	display: flex;
-}
-
-.flex-sm {
-	display: flex;
-}
-
-.flex-md {
-	display: none;
-}
-
-.flex-col {
-	flex-direction: column;
-}
-
-.flex-start {
-	justify-content: flex-start;
-}
-
-.flex-between {
-	justify-content: space-between;
-}
-
-.items-center {
-	align-items: center;
-}
-
-.margin-0 {
-	margin: 0;
-}
-
-@media (min-width: 768px) {
-	header {
-		display: block;
-	}
-	.show-md {
-		display: inherit;
-	}
-
-	.show-sm {
-		display: none;
-	}
-
-	.flex-sm {
-		display: none;
-	}
-
-	.flex-md {
-		display: flex;
-	}
+	height: 100%;
 }

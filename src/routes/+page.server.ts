@@ -1,9 +1,8 @@
-// import { Octokit } from 'octokit'
-import type { PageServerLoad } from './$types'
+import { Octokit } from 'octokit'
+import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
 	try {
-		/*
 		const octokit = new Octokit({
 			auth: process.env.GITHUB_TOKEN
 		});
@@ -14,19 +13,13 @@ export const load: PageServerLoad = async () => {
 				'X-Github-Api-Version': '2022-11-28'
 			}
 		});
-
 		return {
-			repositories: repositories.data
+			projects: repositories.data
 		}
-		*/
-		return {
-			repositories: [{ name: 'nvio', description: 'lorem ipsum dolor sit amet' }, { name: 'whiteboardev.com', description: 'consectetur adipiscing elit' }]
-		}
-	}
-	catch (error) {
-		console.error(error)
+	} catch (error) {
+		console.error(error);
 		return {
 			repositories: [{ name: 'nvio' }, { name: 'whiteboardev.com' }]
-		}
+		};
 	}
-}
+};
