@@ -5,6 +5,7 @@
 @import './filters.css';
 @import './utils.css';
 @import './animations.css';
+@import './linear.css';
 
 :root {
 	/* Colors */
