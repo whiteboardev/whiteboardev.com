@@ -1,8 +1,11 @@
 <script lang="ts">
+	import * as Three from 'three';
 	import { slide } from 'svelte/transition';
 	import TechStack from './TechStack.svelte';
 	import { quintOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
+	let canvas: HTMLCanvasElement;
 	let showContactOptions: boolean = false;
 	let contactOptionsElement: HTMLUListElement;
 
@@ -18,9 +21,38 @@
 			}, 100);
 		}
 	}
+
+	onMount(() => {
+		const scene = new Three.Scene();
+		const camera = new Three.PerspectiveCamera(
+			75,
+			window.innerWidth / window.innerHeight,
+			0.1,
+			1000
+		);
+		const renderer = new Three.WebGLRenderer({ canvas, antialias: true });
+		const geometry = new Three.BoxGeometry(1, 1, 1);
+		const lines = new Three.LineBasicMaterial({ color: 0x3e3f3f });
+		const cube = new Three.LineSegments(geometry, lines);
+
+		function animate() {
+			requestAnimationFrame(animate);
+			cube.rotation.x += 0.01;
+			cube.rotation.y += 0.01;
+			renderer.render(scene, camera);
+		}
+
+		scene.background = new Three.Color(0xffffff);
+		scene.add(cube);
+		camera.position.z = 5;
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		animate();
+	});
 </script>
 
 <main id="main-section" class="container">
+	<canvas bind:this={canvas}></canvas>
 	<article id="hero" class="hero">
 		<figure id="hero-image" class="w-full flex flex-center items-center">
 			<img
